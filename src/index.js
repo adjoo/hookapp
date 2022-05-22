@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import "./antdCustomTheme.less";
 import './index.css';
 import App from './App';
+import {Provider} from "react-redux";
+import store from "./redux/redux-store";
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+//react-redux global context provider
 root.render(
   <React.StrictMode>
-    <App />
+      <Provider store={store}>
+          <App />
+      </Provider>
   </React.StrictMode>
 );
 
