@@ -34,3 +34,5 @@ type PropertiesType<T> = T extends {[key: string] : infer U } ? U : never
 //то есть возвращаем тип экшена
 //если методов в объекте несколько - они будут перечислены через |
 export type InferActionTypes<T extends {[key: string] : (...args: any[])=>any}> = ReturnType<PropertiesType<T>>
+
+(window as any).store = store;

@@ -2,10 +2,11 @@ import React, {useEffect} from 'react'
 import './App.css';
 import {Header} from './components/Header/Header';
 import {LoginPage} from "./components/Login/LoginPage";
-import Desktop from "./components/Desktop/Desktop";
+
 import {AppStateType} from "./redux/redux-store";
 import {connect} from "react-redux";
 import {getAuthStatus, setAuthStatus, removeAuthStatus} from "./redux/auth-reducer";
+import Desktop from "./components/Desktop/Desktop";
 
 type PropsType = MapStateToPropsType & MapDispatchToPropsType
 
